@@ -7,7 +7,7 @@ Utilizing heuristics; path compression and union by rank
 ## Use Cases
 
 ### Use Case #1
-Kruskal's algorithm
+Kruskal's algorithm - (https://en.wikipedia.org/wiki/Kruskal%27s_algorithm)
 ```c
 #include "unionfind.h"
 
