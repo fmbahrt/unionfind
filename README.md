@@ -16,6 +16,9 @@ int main(){
     return 0;
 }
 ```
+
+### Use Case #2
+Connected Components (Graph Theory) - (https://en.wikipedia.org/wiki/Connected_component_%28graph_theory%29)
 ## Authors
 
 * **Frederik Bahrt**  - (https://github.com/fmbahrt)
