@@ -9,11 +9,11 @@ TreeNode *makeSet(int val){
 };
 
 // Recursive as of right now - Make this iterative
-int find(TreeNode *node){
-    if (node->parent != node){
-        return find(node->parent);
+TreeNode *findSet(TreeNode *node){
+    if (node != node->parent){
+        node->parent = findSet(node->parent);
     }
-    return node->number;
+    return node->parent;
 }
 
 // Right way to use pointers?

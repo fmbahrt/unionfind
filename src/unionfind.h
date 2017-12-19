@@ -2,13 +2,15 @@
 #define UNION_FIND_H_
 
 typedef struct TreeNode{
-   int number;
+   int number; //Node Value - temp
    struct TreeNode *parent;
 }TreeNode;
 
 TreeNode *makeSet(int val);
-int find(TreeNode *node);
+TreeNode *findSet(TreeNode *node);
 void unions(TreeNode *node_x,
 	    TreeNode *node_y);
+void link(TreeNode *node_x,
+          TreeNode *node_y);
 
 #endif
