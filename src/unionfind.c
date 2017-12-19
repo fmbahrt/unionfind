@@ -20,7 +20,7 @@ TreeNode *findSet(TreeNode *node){
 // Right way to use pointers?
 void unions(TreeNode *node_x,
             TreeNode *node_y){
-    node_y->parent = node_x;
+    link(findSet(node_x), findSet(node_y));
 }
 
 void link(TreeNode *node_x,
