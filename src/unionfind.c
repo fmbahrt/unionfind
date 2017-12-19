@@ -5,6 +5,7 @@ TreeNode *makeSet(int val){
     TreeNode *node = malloc(sizeof(TreeNode));
     node->number = val;
     node->parent = node;
+    node->rank   = 0;
     return node;
 };
 
@@ -20,4 +21,17 @@ TreeNode *findSet(TreeNode *node){
 void unions(TreeNode *node_x,
             TreeNode *node_y){
     node_y->parent = node_x;
+}
+
+void link(TreeNode *node_x,
+          TreeNode *node_y){
+    if (node_x->rank > node_y->rank){
+        node_y->parent = node_x;
+    }
+    else{
+        node_x->parent = node_y;
+        if (node_x->rank == node_y->rank){
+            node_y->rank = (node_y->rank) + 1;
+        }
+    }
 }
